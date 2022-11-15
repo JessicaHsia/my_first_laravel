@@ -90,14 +90,14 @@
                     </div>
                     <div class="swiper-slide">
                         <a href="https://jessicahsia.github.io/Mooncard/">
-                            <img src="{{asset('img/mooncard.jpg')}}" />
+                            <img src="{{ asset('img/mooncard.jpg') }}" />
                         </a>
                         <p><a href="https://github.com/JessicaHsia/Mooncard.git">Moon Card</a></p>
                     </div>
                     <div class="swiper-slide">
                         <a
                             href="https://www.figma.com/file/iHdJHPXhVD3Xu7JUow8qBa/%E8%87%BA%E6%9D%B1%E5%A4%A7%E5%AD%B8%E5%A0%B4%E9%A4%A8%E9%A0%90%E5%80%9F%E7%B3%BB%E7%B5%B1?node-id=1%3A2">
-                            <img src="{{asset('img/plaining.jpg')}}" />
+                            <img src="{{ asset('img/plaining.jpg') }}" />
                         </a>
                         <span>Figma Project</span>
                     </div>
@@ -132,7 +132,6 @@
                     src="./img/Resume_page-0002.jpg" alt=""></a>
         </ul>
     </main>
-    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -149,16 +148,16 @@
 
 
         //loading頁面結束設定
-        window.addEventListener("load", function (event) {
+        window.addEventListener("load", function(event) {
             setTimeout(() => loadingpag.classList.add('offload'), 3000);
         });
 
         //hambar設定
-        menubox.addEventListener('click', function () {
+        menubox.addEventListener('click', function() {
             menuList.classList.toggle('menu-show');
         });
 
-        main.addEventListener('click', function () {
+        main.addEventListener('click', function() {
             menuList.classList.remove('menu-show');
         })
 
