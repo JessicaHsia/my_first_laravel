@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+nav .hambar-box {
+  padding-left: 20px;
+  display: none;
+}
+nav .hambar-box .menu_all {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+nav .hambar-box .menu_line {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(101, 0, 119, 0.7176470588);
+}
+nav .hambar-box .menu-1 {
+  clear: both;
+  background-color: #FFF;
+  width: 150px;
+  max-height: 500px;
+  position: absolute;
+  top: 10%;
+  display: none;
+  z-index: 99999;
+  transition: max-height 0.8S;
+}
+nav .hambar-box .menu-1 li {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  border-bottom: 2px solid rgba(101, 0, 119, 0.7176470588);
+}
+nav .hambar-box .menu-1 li a {
+  display: block;
+  font-size: 18px;
+  color: black;
+}
+nav .hambar-box .menu-1 li a:hover {
+  background-color: lightgray;
+  color: #FFF;
+}
+nav .hambar-box .menu-show {
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 430px) and (max-width: 1024px) {
+  nav .hambar-box {
+    display: block;
+  }
+}/*# sourceMappingURL=hambar-box.css.map */

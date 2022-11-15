@@ -8,17 +8,17 @@
     <title>Microsoft-MYSELF0830</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/microsoft-myself0830-css.css">
-    <link rel="stylesheet" href="./css/ham-small.css">
-    <link rel="stylesheet" href="./css/footer-css.css">
-    <link rel="stylesheet" href="./css/swiper.css">
-    <link rel="stylesheet" href="./css/menu-bar.css">
+    <link rel="stylesheet" href="{{asset('css/microsoft.css')}}">
+    <link rel="stylesheet" href="{{asset('css/microsoft-ham.css')}}">
+    <link rel="stylesheet" href="{{asset('css/microsoft-footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/microsoftswiper.css')}}">
+    <link rel="stylesheet" href="{{asset('css/microsoft-menu-bar.css')}}">
 </head>
 
 <body>
     <nav class="nav" >
         <div class="logo">
-            <img src="./img/MICROSOFT_logo.png" width="108px" height="23px">
+            <img src="{{asset('img/microsoft_logo.png')}}" width="108px" height="23px">
         </div>
         <div class="nav_menu">
             <div class="menu_L">
@@ -151,6 +151,7 @@
                     </ul>
                 </div>
                 <div class="R_btn">
+                    <li><a href="/"><i class="fa-regular fa-house"></i></a></li>
                     <div class="btn_menu">
                         <input type="checkbox" id="menu-bar-switch" hidden>
                         <label for="menu-bar-switch" class="menu_bar">
@@ -160,7 +161,7 @@
                         </label>
                         <ul class="menu-bar-all">
                             <ul class="menu-bar-box">
-                                <ul class="menu-bar-list"> 
+                                <ul class="menu-bar-list">
                                     <li>
                                         <span>軟體</span>
                                     </li>
@@ -235,16 +236,16 @@
                     <div>
                         <a href="#" class="menu btn_b" tabindex="1">
                             <span> 搜尋 </span>
-                            <img src="./img/searchingimg.png" class="searching">
+                            <img src="{{asset('img/searchingimg.png')}}" class="searching">
                         </a>
                     </div>
                     <div> <a href="#" class="menu btn_b" tabindex="1">
                             <span> 購物車 </span>
-                            <img src="./img/shopping_cart.png" class="car">
+                            <img src="{{asset('img/shopping_cart.png')}}" class="car">
                         </a> </div>
                     <div> <a href="#" class="menu btn_b" tabindex="1">
                             <span> 登入 </span>
-                            <img src="./img/log_in.svg" class="logman"> </a>
+                            <img src="{{asset('img/log_in.svg')}}" class="logman"> </a>
                     </div>
                 </div>
             </div>
@@ -257,14 +258,14 @@
                     <div>
                         <picture>
                             <source media="(min-width: 1400px)"
-                                srcset="./img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP5-1920x600.jpeg">
+                                srcset="{{asset('img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP5-1920x600.jpeg')}}">
                             <source media="(min-width: 1084px)"
-                                srcset="./img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP4-1399x600.jpeg">
+                                srcset="{{asset('img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP4-1399x600.jpeg')}}">
                             <source media="(min-width: 860px)"
-                                srcset="./img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP3-1083x600.avif">
+                                srcset="{{asset('img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP3-1083x600.avif')}}">
                             <source media="(min-width: 540px)"
-                                srcset="./img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP2-859x540.avif">
-                            <img src="./img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP1-539x440.avif">
+                                srcset="{{asset('img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP2-859x540.avif')}}">
+                            <img src="{{asset('img/swiperbg1/Highlight-Hero-Surface-Pro-8-with-TypeCover_VP1-539x440.avif')}}">
                         </picture>
                     </div>
                     <div class="memo memo_bg_1">
@@ -279,14 +280,14 @@
                     <div>
                         <picture>
                             <source media="(min-width: 1400px)"
-                                srcset="./img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP5-1920x600.webp">
+                                srcset="{{asset('img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP5-1920x600.webp')}}">
                             <source media="(min-width: 1084px)"
-                                srcset="./img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP4-1399x600.webp">
+                                srcset="{{asset('img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP4-1399x600.webp')}}">
                             <source media="(min-width: 860px)"
-                                srcset="./img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP3-1083x600.jpeg">
+                                srcset="{{asset('img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP3-1083x600.jpeg')}}">
                             <source media="(min-width: 540px)"
-                                srcset="./img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP2-859x540.jpeg">
-                            <img src="./img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01-VP1-539x440.jpeg">
+                                srcset="{{asset('img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01_VP2-859x540.jpeg')}}">
+                            <img src="{{asset('img/swiperbg2/Highlight-Surface-Laptop-Go-2-01-M01-VP1-539x440.jpeg')}}">
                         </picture>
                     </div>
                     <div class="memo memo_bg_2">
@@ -306,21 +307,21 @@
     <div class="container">
         <div class="content_2">
             <div class="content_2box content_2box-1">
-                <img src="./img/container_2_first.webp" alt="">
+                <img src="{{asset('img/container_2_first.webp')}}" alt="">
                 <a href="#">選擇你的 Microsoft 365</a>
             </div>
             <div class="content_2box content_2box-2">
-                <img src="./img/container_2_middle.webp" alt="">
+                <img src="{{asset('img/container_2_middle.webp')}}" alt="">
                 <a href="#">選購 Surface 裝置</a>
             </div>
             <div class="content_2box content_2box-3">
-                <img src="./img/container_2_first.webp" alt="">
+                <img src="{{asset('img/container_2_first.webp')}}" alt="">
                 <a href="#">取得 Windows 11</a>
             </div>
         </div>
         <div class="content_3">
             <div class="content_3box">
-                <img src="./img/container_3_box1.webp" alt="">
+                <img src="{{asset('img/container_3_box1.webp')}}" alt="">
                 <div class="content_3box_text">
                     <h2>Microsoft 365</h2>
                     <p>進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</p>
@@ -331,7 +332,7 @@
                 </div>
             </div>
             <div class="content_3box">
-                <img src="./img/container_3_box2.webp" alt="">
+                <img src="{{asset('img/container_3_box2.webp')}}" alt="">
                 <div class="content_3box_text">
                     <h2>Surface Laptop 4</h2>
                     <p>運用完美結合時尚外型、超薄設計、多工速度和增強效能的裝置，一手包辦。</p>
@@ -341,7 +342,7 @@
                 </div>
             </div>
             <div class="content_3box">
-                <img src="./img/content_3_box3.png" alt="">
+                <img src="{{asset('img/content_3_box3.png')}}" alt="">
                 <div class="content_3box_text">
                     <h2>Microsoft Edge</h2>
                     <p>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</p>
@@ -351,7 +352,7 @@
                 </div>
             </div>
             <div class="content_3box">
-                <img src="./img/container_3_box4.webp" alt="">
+                <img src="{{asset('img/container_3_box4.webp')}}" alt="">
                 <div class="content_3box_text">
                     <h2>PC Game Pass</h2>
                     <p>解鎖 100 多款精彩遊戲和 EA Play，而且首月只需 NT$30。 此優惠僅適用於新訂閱者。</p>
@@ -366,14 +367,14 @@
             <div class="content_4_picture">
                 <picture>
                     <source media="(min-width: 1400px)"
-                        srcset="./img2/container_3_box2 1596x600.webp">
+                        srcset="{{asset('img/container_4/container_3_box2 1596x600.webp')}}">
                     <source media="(min-width: 1084px)"
-                        srcset="./img2/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP4-1260x600">
+                        srcset="{{asset('img/container_4/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP4-1260x600')}}">
                     <source media="(min-width: 860px)"
-                        srcset="./img2/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP3-1083x600.jpeg">
+                        srcset="{{asset('img/container_4/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP3-1083x600.jpeg')}}">
                     <source media="(min-width: 540px)"
-                        srcset="./img2/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP2-859x540.jpeg">
-                    <img src="./img2/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP1-539x440.jpeg">
+                        srcset="{{asset('img/container_4/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP2-859x540.jpeg')}}">
+                    <img src="{{asset('img/container_4/gldn-Soft-Hero-OneDriveCampaignRefresh-2-VP1-539x440.jpeg')}}">
                 </picture>
             </div>
             <div class="content_4_memo">
@@ -389,7 +390,7 @@
         </div>
         <div class="content_5">
             <div class="content_5box">
-                <img src="./img/container_5_box1.webp" alt="">
+                <img src="{{asset('img/container_5_box1.webp')}}" alt="">
                 <div class="content_5box_L">
                     <div class="newup">
                         <span>新上市</span>
@@ -402,7 +403,7 @@
                 </div>
             </div>
             <div class="content_5box">
-                <img src="./img/container_5_box2.webp" alt="">
+                <img src="{{asset('img/container_5_box2.webp')}}" alt="">
                 <div class="content_5box_R">
                     <h2>免費取得 Microsoft Teams</h2>
                     <p>線上會議、聊天和共用雲端儲存空間，盡在一處。</p>
@@ -412,7 +413,7 @@
                 </div>
             </div>
             <div class="content_5box">
-                <img src="./img/container_5_box3.webp" alt="">
+                <img src="{{asset('img/container_5_box3.webp')}}" alt="">
                 <div class="content_5box_R">
                     <h2>Microsoft 365 商務版</h2>
                     <p>透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</p>
@@ -422,7 +423,7 @@
                 </div>
             </div>
             <div class="content_5box">
-                <img src="./img/container_3_box4.webp" alt="">
+                <img src="{{asset('img/container_3_box4.webp')}}" alt="">
                 <div class="content_5box_R">
                     <h2>商務用 Windows 11 登場</h2>
                     <p>專為混合式辦公而設計。 為員工帶來實用性。 為 IT 帶來一致性。 為所有人帶來安全性。</p>
@@ -505,7 +506,7 @@
         </div>
         <div class="footerbar">
             <div>
-                <a href="#" class="language"> <img src="./img/earth.png" alt=""> <p>中文(台灣)</p>  </a>
+                <a href="#" class="language"> <img src="{{asset('img/earth.png')}}" alt=""> <p>中文(台灣)</p>  </a>
             </div>
             <div class="ifro-bar">
                 <a href="#">聯絡 Microsoft</a>

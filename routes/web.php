@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageSet;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('microsorf');
-});
+Route::get('/', [PageSet::class, 'index']);
+Route::get('/weather-map', [PageSet::class, 'weather']);
+Route::get('/colorgame', [PageSet::class, 'game']);
+Route::get('/bmi-test', [PageSet::class, 'bmi']);
+Route::get('/microsoft-index', [PageSet::class, 'microsoftIndex']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
