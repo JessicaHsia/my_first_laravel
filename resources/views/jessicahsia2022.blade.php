@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('css/loading.css')}}">
-    <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
-    <link rel="stylesheet" href="{{asset('css/hambar-box.css')}}">
-    <link rel="stylesheet" href="{{asset('css/jessicahsia.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/hambar-box.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jessicahsia.css') }}">
     <title>JessicaHsia 2022.08 - 2022.11</title>
 </head>
 
@@ -37,9 +37,11 @@
             <input type="checkbox" id="menu-switch" hidden>
 
             <ul class="menu-1">
-                <li><a href="#">My Project</a></li>
-                <li><a href="#">80 sprint</a></li>
-                <li><a href="#">Resume</a></li>
+                <li onclick="myArea()">My Work</li>
+                <li onclick="teamArea()">80 sprint</li>
+                <li onclick="resumeArea()">Resume</li>
+                <a href="https://www.facebook.com/jessica.hsia.5"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://line.me/ti/p/tbYoGhY8QY"><i class="fa-brands fa-line"></i></a>
             </ul>
         </ul>
         <ul id="my_name">
@@ -48,9 +50,9 @@
     </nav>
     <header>
         <ul class="btn">
-            <li><a href="#">My Project</a></li>
-            <li><a href="#">80 sprint</a></li>
-            <li><a href="#">Resume</a></li>
+            <li onclick="myArea()">My Work</li>
+            <li onclick="teamArea()">80 sprint</li>
+            <li onclick="resumeArea()">Resume</li>
         </ul>
         <ul class="social-btn">
             <a href="https://www.facebook.com/jessica.hsia.5"><i class="fa-brands fa-facebook"></i></a>
@@ -58,58 +60,92 @@
         </ul>
     </header>
     <main>
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="/weather-map">
-                        <img src="{{asset('img/weathermap.jpg')}}" />
-                    </a>
-                    <p><a href="https://github.com/JessicaHsia/WeatherMap.git">Weather Map</a></p>
-                </div>
-                <div class="swiper-slide">
-                    <a href="/colorgame">
-                        <img src="{{asset('img/colorgame.jpg')}}" />
-                    </a>
-                    <p><a href="https://github.com/JessicaHsia/Hsia.git">Color Game</a></p>
-                </div>
-                <div class="swiper-slide">
-                    <a href="/bmi-test">
-                        <img src="{{asset('img/BMI.jpg')}}" />
-                    </a>
-                    <p><a href="https://github.com/JessicaHsia/BMI.git">BMI</a></p>
-                </div>
-                <div class="swiper-slide">
-                    <a href="/microsoft-index">
-                        <img src="{{asset('img/microsoftindex.jpg')}}" />
-                    </a>
-                    <p><a href="https://github.com/JessicaHsia/MicrosoftIndex.git">Microsoft Index</a></p>
+        <div class="swiper-area">
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/weather-map">
+                            <img src="{{ asset('img/weathermap.jpg') }}" />
+                        </a>
+                        <p><a href="https://github.com/JessicaHsia/WeatherMap.git">Weather Map</a></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/colorgame">
+                            <img src="{{ asset('img/colorgame.jpg') }}" />
+                        </a>
+                        <p><a href="https://github.com/JessicaHsia/Hsia.git">Color Game</a></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/bmi-test">
+                            <img src="{{ asset('img/BMI.jpg') }}" />
+                        </a>
+                        <p><a href="https://github.com/JessicaHsia/BMI.git">BMI</a></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/microsoft-index">
+                            <img src="{{ asset('img/microsoftindex.jpg') }}" />
+                        </a>
+                        <p><a href="https://github.com/JessicaHsia/MicrosoftIndex.git">Microsoft Index</a></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://jessicahsia.github.io/Mooncard/">
+                            <img src="{{asset('img/mooncard.jpg')}}" />
+                        </a>
+                        <p><a href="https://github.com/JessicaHsia/Mooncard.git">Moon Card</a></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <a
+                            href="https://www.figma.com/file/iHdJHPXhVD3Xu7JUow8qBa/%E8%87%BA%E6%9D%B1%E5%A4%A7%E5%AD%B8%E5%A0%B4%E9%A4%A8%E9%A0%90%E5%80%9F%E7%B3%BB%E7%B5%B1?node-id=1%3A2">
+                            <img src="{{asset('img/plaining.jpg')}}" />
+                        </a>
+                        <span>Figma Project</span>
+                    </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
 
-        <!-- <ul id="my_project">
-            <li>BMI</li>
-            <li>Weather MAp</li>
-            <li>Color game</li>
-            <li>Moon Card</li>
-            <li>Microsoft Index</li>
-            <li></li>
+        <ul class="team-project">
+            <li>
+                <a
+                    href="https://docs.google.com/document/d/1QcvhOhkz27QBkRhO-9rM6GPxk1Kt4OtP/edit?usp=sharing&ouid=103935938099245850249&rtpof=true&sd=true"><img
+                        src="./img/frontdesk-sitemap.jpg" alt="">企劃-前台網站地圖</a>
+
+                <a href="https://111-08-fcu-dessertcave.dev-hub.io/about_us"><img src="./img/dessert-cave-story.jpg"
+                        alt="">程式-前台介面</a>
+            </li>
+            <li>
+                <a
+                    href="https://docs.google.com/document/d/1n_jdyx_UORMY_LPTnq_LzlMk-kuhmgEZ/edit?usp=sharing&ouid=103935938099245850249&rtpof=true&sd=true"><img
+                        src="./img/backdesk-sitemap.jpg" alt="">企劃-後台網站地圖</a>
+
+                <a href="https://jessicahsia.github.io/BackDesk/"><img src="./img/backdesk.jpg"
+                        alt="">程式-後台介面</a>
+            </li>
+
         </ul>
-        <ul id="team_project"></ul>
-        <ul id="resume"></ul> -->
+        <ul class="resume">
+            <a href="./img/Resume_page-0001.jpg" id="openimg-newpage" target="_blank"><img
+                    src="./img/Resume_page-0001.jpg" alt=""></a>
+            <a href="./img/Resume_page-0002.jpg" id="openimg-newpage" target="_blank"><img
+                    src="./img/Resume_page-0002.jpg" alt=""></a>
+        </ul>
     </main>
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script>
-
-        const outbody = document.querySelector('body');
+        const main = document.querySelector('main');
         const loadingpag = document.querySelector('#preloader');
         const menubox = document.querySelector('#menu_all');
         const menuList = document.querySelector('.menu-1');
         const lineM = document.querySelector('.menu_line');
+
+        const swiperArea = document.querySelector('.swiper-area');
+        const teamProject = document.querySelector('.team-project');
+        const resume = document.querySelector('.resume');
 
 
         //loading頁面結束設定
@@ -117,10 +153,34 @@
             setTimeout(() => loadingpag.classList.add('offload'), 3000);
         });
 
-
-        menubox.addEventListener('click', function(){
+        //hambar設定
+        menubox.addEventListener('click', function () {
             menuList.classList.toggle('menu-show');
+        });
+
+        main.addEventListener('click', function () {
+            menuList.classList.remove('menu-show');
         })
+
+
+        // 頁面切換設定
+        function teamArea() {
+            swiperArea.style.display = 'none';
+            teamProject.style.display = 'flex';
+            resume.style.display = 'none';
+        }
+
+        function myArea() {
+            swiperArea.style.display = 'block';
+            teamProject.style.display = 'none';
+            resume.style.display = 'none';
+        }
+
+        function resumeArea() {
+            swiperArea.style.display = 'none';
+            teamProject.style.display = 'none';
+            resume.style.display = 'block';
+        }
 
 
 
@@ -129,7 +189,7 @@
             loop: true,
             grabCursor: true,
             autoplay: {
-                delay: 6000,
+                delay: 10000,
             },
             cubeEffect: {
                 shadow: true,
@@ -140,9 +200,13 @@
             scrollbar: {
                 el: ".swiper-scrollbar",
             },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
-
 </body>
 
 </html>
