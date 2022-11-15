@@ -1,0 +1,132 @@
+.ham-small {
+    display: none;
+    /* position: absolute; */
+}
+
+@media (max-width:859px) {
+    .ham-small {
+        display: flex;
+        left: 0;
+    }
+}
+
+.ham_bar {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/hambar.png);
+}
+
+@media (max-width:859px) {
+    #ham-menu-switch:checked+.ham_bar {
+        background-image: url(../img/rwd-x.png);
+        z-index: 99999;
+    }
+
+    #ham-menu-switch:checked~.R_btn {
+        /* display:block; */
+        /* 有利用到 flex的屬性功能 必須改成display:flex*/
+        display: flex;
+        position: absolute;
+        top: 100px;
+        left: 5%;
+        width: 80px;
+        background-color: lightgrey;
+        padding: 5px;
+
+    }
+}
+
+.mobile-menu {
+    display: none;
+    /* display: block; */
+}
+
+@media (max-width:859px) {
+
+    #ham-menu-switch:checked~.mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        background-color: #f2f2f2;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 54px;
+        left: -50px;
+        z-index: 99999;
+        border-bottom: 1px solid black;
+    }
+
+    .mobile-menu li {
+        padding: 15px 30px;
+        font-size: 16px;
+        /* float: right;  或是下方code*/
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-menu li:hover {
+        border-bottom-width: 1px;
+        padding-bottom: 15px;
+        border: 1px solid #e6e6e6;
+    }
+
+    .mobile-menu li:focus {
+        border: 1px dashed black;
+    }
+
+    .mobile-menu .sub-dropdown-menu {
+        width: 100%;
+        display: none;
+    }
+
+
+
+    .mobile-menu li span:nth-of-type(2) {
+        display: inline-block;
+    }
+
+
+    .mobile-menu li i:nth-of-type(2) {
+        display: none;
+    }
+
+    /* 一開始沒按 */
+
+    #chevron-soft-swich:checked+label li i:nth-of-type(1) {
+        display: none;
+    }
+
+    /* 按了之後 */
+    /* down不見 */
+
+    #chevron-soft-swich:checked+label li i:nth-of-type(2) {
+        display: block;
+    }
+
+    /* 出現up */
+
+
+
+    /* #chevron-soft-swich:checked~ .sub-dropdown-menu,
+    #chevron-soft-swich:checked+ label li i:nth-of-type(2) {
+        display: block;
+        background-color: plum;
+    } */
+
+
+    /* 統一動作 */
+    .chevron-swich:nth-of-type(n):checked+label .sub-dropdown-menu:nth-of-type(n),
+    .chevron-swich:nth-of-type(n):checked+label li i:nth-of-type(2) {
+        display: block;
+        /* background-color: plum; */
+    }
+
+    /* 按下第N個chevron-swich時，  */
+    /* .chevron-swich:nth-of-type(n):checked+label li i:nth-of-type(1) {
+        display: none;
+    } */
+
+}
