@@ -20,7 +20,7 @@ a {
 }
 
 nav .hambar-box {
-  padding-left: 20px;
+  padding-left: 30px;
   display: none;
 }
 nav .hambar-box .menu_all {
@@ -43,7 +43,7 @@ nav .hambar-box .menu-1 {
   width: 150px;
   max-height: 500px;
   position: absolute;
-  top: 10%;
+  top: 15%;
   display: none;
   z-index: 99999;
   transition: max-height 0.8S;
@@ -51,18 +51,68 @@ nav .hambar-box .menu-1 {
 nav .hambar-box .menu-1 li {
   width: 100%;
   text-align: center;
-  padding: 10px;
-  border-radius: 10%;
+  margin: 5px 0;
+  border-radius: 0 0 10% 10%;
   border-bottom: 2px solid rgba(101, 0, 119, 0.7176470588);
-}
-nav .hambar-box .menu-1 li a {
-  display: block;
   font-size: 18px;
   color: black;
+  font-weight: 200;
+  line-height: unset;
+  letter-spacing: 2px;
 }
-nav .hambar-box .menu-1 li a:hover {
+nav .hambar-box .menu-1 li:hover {
   background-color: lightgray;
   color: #FFF;
+}
+nav .hambar-box .menu-1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+  border-radius: 10%;
+  background: unset;
+  font-size: 12px;
+  color: black;
+  font-weight: 200;
+  line-height: unset;
+  letter-spacing: 2px;
+}
+nav .hambar-box .menu-1 a .fa,
+nav .hambar-box .menu-1 a .fa-brands,
+nav .hambar-box .menu-1 a .fa-classic,
+nav .hambar-box .menu-1 a .fa-regular,
+nav .hambar-box .menu-1 a .fa-sharp,
+nav .hambar-box .menu-1 a .fa-solid,
+nav .hambar-box .menu-1 a .fab,
+nav .hambar-box .menu-1 a .far,
+nav .hambar-box .menu-1 a .fas {
+  font-size: 25px;
+  color: grey;
+}
+nav .hambar-box .menu-1 a .fa.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fa-brands.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fa-classic.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fa-regular.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fa-sharp.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fa-solid.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fab.fa-facebook:hover,
+nav .hambar-box .menu-1 a .far.fa-facebook:hover,
+nav .hambar-box .menu-1 a .fas.fa-facebook:hover {
+  font-size: 30px;
+  color: blue;
+}
+nav .hambar-box .menu-1 a .fa.fa-line:hover,
+nav .hambar-box .menu-1 a .fa-brands.fa-line:hover,
+nav .hambar-box .menu-1 a .fa-classic.fa-line:hover,
+nav .hambar-box .menu-1 a .fa-regular.fa-line:hover,
+nav .hambar-box .menu-1 a .fa-sharp.fa-line:hover,
+nav .hambar-box .menu-1 a .fa-solid.fa-line:hover,
+nav .hambar-box .menu-1 a .fab.fa-line:hover,
+nav .hambar-box .menu-1 a .far.fa-line:hover,
+nav .hambar-box .menu-1 a .fas.fa-line:hover {
+  font-size: 30px;
+  color: rgb(50, 235, 124);
 }
 nav .hambar-box .menu-show {
   max-height: 500px;
@@ -71,7 +121,7 @@ nav .hambar-box .menu-show {
   align-items: center;
 }
 
-@media screen and (min-width: 430px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   nav .hambar-box {
     display: block;
   }

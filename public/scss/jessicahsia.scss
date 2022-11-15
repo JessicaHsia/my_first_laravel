@@ -1,0 +1,194 @@
+@import 'basic_set';
+
+
+nav {
+    @include size(100%, 60px, unset, unset);
+    @include flex(flex-start, center);
+    padding: 10px;
+    @include font(30px, #660077, 400, unset, 2px);
+    // font-style: oblique;
+    font-family: cursive;
+
+    #my_name{
+        padding-left: calc(100% - 60%);
+    }
+
+}
+
+header {
+    @include flex(space-around, flex-start);
+    flex-direction: column;
+    padding: 50px 10px;
+    font-family: cursive;
+
+    .btn {
+        height: 300px;
+        @include flex(space-around, flex-start);
+        flex-direction: column;
+        padding-left: 50px;
+
+        li {
+            @include flex(center, center);
+            @include size(150px, 50px, 0 0 10% 10%, unset);
+            @include font(18px, black, 200, unset, 2px);
+
+            &:hover {
+                border-bottom: 2px solid #660077;
+            }
+        }
+    }
+
+    .social-btn {
+        width: 200px;
+        height: 100px;
+        @include flex(center, center);
+        flex-direction: column;
+        padding-left: 50px;
+
+        a {
+            @include flex(center, center);
+            @include size(100px, 50px, 10%, unset);
+            @include font(12px, black, 200, unset, 2px);
+
+            .fa,
+            .fa-brands,
+            .fa-classic,
+            .fa-regular,
+            .fa-sharp,
+            .fa-solid,
+            .fab,
+            .far,
+            .fas {
+                font-size: 25px;
+                color: grey;
+
+                &.fa-facebook:hover {
+                    font-size: 30px;
+                    color: blue;
+                }
+
+                &.fa-line:hover {
+                    font-size: 30px;
+                    color: rgb(50, 235, 124);
+                }
+            }
+        }
+    }
+}
+
+main {
+    @include size(calc(100% - 20%), 500px, unset, unset);
+    // rgba(237, 214, 157, 0.119)
+    @include pos(absolute, 10%, 20%);
+
+    .works{
+        @include flex(center, flex-start);
+        flex-wrap: wrap;
+        padding: 20px 10px;
+        li{
+            @include flex(center, center);
+            flex-direction: column;
+            @include font(12px, black, 100, unset, 2px);
+            padding: 20px;
+            img{
+                @include size(150px, 150px, 10px, unset);
+            }
+            a{
+                cursor: alias;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .team-project{
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5% 0 10% 20%;
+        li{
+            @include flex(center, flex-start);
+            flex-direction: column;
+            width: 300px;
+            a{
+                @include size(250px, 200px, unset, unset);
+                @include flex(center, center);
+                flex-direction: column;
+                @include font(12px, black, 100, unset, 2px);
+
+                img{
+                    @include size(200px, 200px, unset, unset);
+                    object-fit: cover;
+                    object-position: left;
+                    padding-bottom: 10px;
+                }
+                &:nth-of-type(2){
+                    padding: 80px 0 0 100px;
+                }
+            }
+
+            a:hover{
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    .resume{
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5% 0 10% 15%;
+        a{
+            img{
+                @include size(300px, 400px, 10px, unset);
+                padding: 10px;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    nav{
+        #my_name{
+            padding-left: 300px;
+        }
+    }
+
+    header{
+        display: none;
+        width: 0;
+    }
+    main{
+        @include size(100%, 400px, unset, unset);
+        @include pos(absolute, 10%, 0%);
+    }
+}
+
+
+@media (max-width: 760px) {
+    nav{
+        #my_name{
+            padding-left: 90px;
+        }
+    }
+
+main{
+    padding: 5%;
+        .team-project{
+            padding: 5% 0 10% 5%;
+            flex-direction: column;
+            li{
+                padding: 50px 0;
+            }
+        }
+        .resume{
+            padding: 5% 0 10% 15%;
+            flex-direction: column;
+        }
+    }
+}

@@ -141,6 +141,37 @@
     top: 10%;
     left: 20%;
   }
+  main .works {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+  }
+  main .works li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    color: black;
+    font-weight: 100;
+    line-height: unset;
+    letter-spacing: 2px;
+    padding: 20px;
+  }
+  main .works li img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: unset;
+  }
+  main .works li a {
+    cursor: alias;
+  }
+  main .works li a:hover {
+    transform: scale(1.1);
+  }
   main .team-project {
     display: none;
     justify-content: flex-start;
@@ -237,4 +268,4 @@
       padding: 5% 0 10% 15%;
       flex-direction: column;
     }
-  }/*# sourceMappingURL=index.css.map */
+  }/*# sourceMappingURL=jessicahsia.css.map */

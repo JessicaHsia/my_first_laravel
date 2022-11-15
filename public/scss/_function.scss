@@ -1,0 +1,32 @@
+// 定義divz card呈現的特性模板
+// 色彩三元素rgba
+@mixin size($w, $h, $bdrs: 0, $bg: rgba(0, 0, 0, 0)) {
+    width: $w;
+    height: $h;
+    border-radius: $bdrs;
+    background: $bg;
+}
+
+// 設定display模板
+@mixin flex($j, $a) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+}
+
+// position:absolute 模板
+@mixin posa($t: 0, $l: 0, $tX: 0, $tY: 0) {
+    position: absolute;
+    top: $t;
+    left: $l;
+    transform: translate($tX, $tY);
+}
+
+// inherit繼承 
+@mixin font($fz: 0, $c, $fw: inherit, $lh: inherit, $ls: inherit, ) {
+    font-size: $fz;
+    color: $c;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

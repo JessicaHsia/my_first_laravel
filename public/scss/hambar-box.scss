@@ -1,0 +1,97 @@
+@import 'basic_set';
+
+nav{
+    .hambar-box{
+        padding-left: 30px;
+        display: none;
+        .menu_all {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            width: 20px;
+            height: 20px;
+            // background-color: #fff;
+        }
+        
+        //設置漢堡條線條樣式
+        .menu_line {
+            position: absolute;
+            @include size(20px, 20px, 50%, #650077b7);
+        }
+        
+        
+        //選單列
+        .menu-1 {
+            clear: both;
+            background-color: #FFF;
+            //隱藏選單
+            width: 150px;
+            max-height: 500px;
+            position: absolute;
+            top: 15%;
+            display: none;
+            z-index: 99999;
+        
+            //縮放速度
+            transition: max-height .8S;
+            li {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+                border-radius: 0 0 10% 10%;
+                border-bottom: 2px solid #650077b7;
+                @include font(18px, black, 200, unset, 2px);
+                
+                &:hover {
+                    background-color: lightgray;
+                    color: #FFF;
+                }
+            }
+
+            a {
+                @include flex(center, center);
+                @include size(100px, 50px, 10%, unset);
+                @include font(12px, black, 200, unset, 2px);
+    
+                .fa,
+                .fa-brands,
+                .fa-classic,
+                .fa-regular,
+                .fa-sharp,
+                .fa-solid,
+                .fab,
+                .far,
+                .fas {
+                    font-size: 25px;
+                    color: grey;
+    
+                    &.fa-facebook:hover {
+                        font-size: 30px;
+                        color: blue;
+                    }
+    
+                    &.fa-line:hover {
+                        font-size: 30px;
+                        color: rgb(50, 235, 124);
+                    }
+                }
+            }
+        }
+        
+        .menu-show{
+            max-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    nav{
+        .hambar-box{
+            display: block;
+        }
+    }
+}

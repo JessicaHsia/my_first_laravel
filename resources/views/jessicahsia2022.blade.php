@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hambar-box.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jessicahsia.css') }}">
     <title>JessicaHsia 2022.08 - 2022.11</title>
@@ -60,51 +59,16 @@
         </ul>
     </header>
     <main>
-        <div class="swiper-area">
-            <div class="swiper-scrollbar"></div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="/weather-map">
-                            <img src="{{ asset('img/weathermap.jpg') }}" />
-                        </a>
-                        <p><a href="https://github.com/JessicaHsia/WeatherMap.git">Weather Map</a></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="/colorgame">
-                            <img src="{{ asset('img/colorgame.jpg') }}" />
-                        </a>
-                        <p><a href="https://github.com/JessicaHsia/Hsia.git">Color Game</a></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="/bmi-test">
-                            <img src="{{ asset('img/BMI.jpg') }}" />
-                        </a>
-                        <p><a href="https://github.com/JessicaHsia/BMI.git">BMI</a></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="/microsoft-index">
-                            <img src="{{ asset('img/microsoftindex.jpg') }}" />
-                        </a>
-                        <p><a href="https://github.com/JessicaHsia/MicrosoftIndex.git">Microsoft Index</a></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://jessicahsia.github.io/Mooncard/">
-                            <img src="{{ asset('img/mooncard.jpg') }}" />
-                        </a>
-                        <p><a href="https://github.com/JessicaHsia/Mooncard.git">Moon Card</a></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <a
-                            href="https://www.figma.com/file/iHdJHPXhVD3Xu7JUow8qBa/%E8%87%BA%E6%9D%B1%E5%A4%A7%E5%AD%B8%E5%A0%B4%E9%A4%A8%E9%A0%90%E5%80%9F%E7%B3%BB%E7%B5%B1?node-id=1%3A2">
-                            <img src="{{ asset('img/plaining.jpg') }}" />
-                        </a>
-                        <span>Figma Project</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
+
+        <ul class="works">
+            @foreach ($data as $data)
+            <li>
+                <a href="{{$data->pagelink}}"><img src="{{$data->img}}"></a>
+                <p>{{$data->title}}</p>
+                <a href="https://github.com/JessicaHsia/{{$data->link}}">Github<i class="fa-solid fa-right-long"></i></a>
+            </li>
+            @endforeach
+        </ul>
 
         <ul class="team-project">
             <li>
@@ -145,6 +109,7 @@
         const swiperArea = document.querySelector('.swiper-area');
         const teamProject = document.querySelector('.team-project');
         const resume = document.querySelector('.resume');
+        const worksArea = document.querySelector('.works');
 
 
         //loading頁面結束設定
@@ -164,21 +129,24 @@
 
         // 頁面切換設定
         function teamArea() {
-            swiperArea.style.display = 'none';
+            // swiperArea.style.display = 'none';
             teamProject.style.display = 'flex';
             resume.style.display = 'none';
+            worksArea.style.display = 'none';
         }
 
         function myArea() {
-            swiperArea.style.display = 'block';
+            // swiperArea.style.display = 'block';
             teamProject.style.display = 'none';
             resume.style.display = 'none';
+            worksArea.style.display = 'flex';
         }
 
         function resumeArea() {
-            swiperArea.style.display = 'none';
+            // swiperArea.style.display = 'none';
             teamProject.style.display = 'none';
             resume.style.display = 'block';
+            worksArea.style.display = 'none';
         }
 
 

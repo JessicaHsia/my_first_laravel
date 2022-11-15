@@ -15,10 +15,11 @@ use App\Http\Controllers\PageSet;
 */
 
 Route::get('/', [PageSet::class, 'index']);
-Route::get('/weather-map', [PageSet::class, 'weather']);
-Route::get('/colorgame', [PageSet::class, 'game']);
-Route::get('/bmi-test', [PageSet::class, 'bmi']);
-Route::get('/microsoft-index', [PageSet::class, 'microsoftIndex']);
+Route::get('/weather', [PageSet::class, 'weather']);
+Route::get('/color', [PageSet::class, 'game']);
+Route::get('/bmi', [PageSet::class, 'bmi']);
+Route::get('/microsoft', [PageSet::class, 'microsoftIndex']);
+Route::get('/card', [PageSet::class, 'card']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
