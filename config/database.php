@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Str;
+    //migration 修改加上此項目
+use Illuminate\Database\DBAL\TimestampType;
 
 return [
 
@@ -146,6 +148,13 @@ return [
             'database' => env('REDIS_CACHE_DB', '1'),
         ],
 
+    ],
+
+    //migration 修改加上此項目
+    'dbal' => [
+        'types' => [
+            'timestamp' => TimestampType::class,
+        ],
     ],
 
 ];

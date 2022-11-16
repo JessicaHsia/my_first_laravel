@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageSet;
+use App\Http\Controllers\WorksPage;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,15 @@ use App\Http\Controllers\PageSet;
 |
 */
 
-Route::get('/', [PageSet::class, 'index']);
-Route::get('/weather', [PageSet::class, 'weather']);
-Route::get('/color', [PageSet::class, 'game']);
-Route::get('/bmi', [PageSet::class, 'bmi']);
-Route::get('/microsoft', [PageSet::class, 'microsoftIndex']);
-Route::get('/card', [PageSet::class, 'card']);
+Route::get('/', [Controller::class, 'index']);
+Route::get('/weather', [WorksPage::class, 'weather']);
+Route::get('/color', [WorksPage::class, 'game']);
+Route::get('/bmi', [WorksPage::class, 'bmi']);
+Route::get('/microsoft', [WorksPage::class, 'microsoftIndex']);
+Route::get('/card', [WorksPage::class, 'card']);
 
-Route::get('/comment', [PageSet::class, 'comment']);
+Route::get('/comment', [Controller::class, 'comment']);
+Route::get('/comment/save', [Controller::class, 'save_comment']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
