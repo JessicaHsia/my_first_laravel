@@ -63,7 +63,13 @@
         <ul class="works">
             @foreach ($data as $data)
             <li>
-                <a href="{{$data->pagelink}}"><img src="{{$data->img}}"></a>
+
+                @if ($data->img == null || $data->img == '')
+                <div class="no-img">J</div>
+                @else
+                <a href="/{{$data->pagelink}}"><img src="{{$data->img}}"></a>
+                @endif
+
                 <p>{{$data->title}}</p>
                 <a href="https://github.com/JessicaHsia/{{$data->link}}">Github<i class="fa-solid fa-right-long"></i></a>
             </li>

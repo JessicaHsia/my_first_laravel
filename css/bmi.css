@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: linear-gradient(200deg, #FFFFC9, #FFDA96);
+  width: 100%;
+  height: 100%;
+  border-radius: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: unset;
+  flex-wrap: unset;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  position: absolute;
+}
+.container ul {
+  margin-top: 10%;
+}
+.container ul form {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-right: 100px;
+}
+.container ul form input {
+  width: 140px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.container ul button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex(space-around, center, row);
+  background-color: #fff;
+  box-shadow: 5px 5px 5px grey;
+  margin: 20px 5px;
+}
+.container ul caption {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.container ul table, .container ul tr, .container ul th {
+  width: 700px;
+  height: 40px;
+  border-radius: none;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.container ul td {
+  width: 60%;
+}
+.container ul .output {
+  border: 2px solid grey;
+  color: brown;
+  width: 300px;
+  height: 70px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset;
+  flex-wrap: unset;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 30px;
+  box-shadow: 5px 5px 10px grey;
+  opacity: 1;
+  transition: all 2s;
+}
+.container ul .output-act {
+  opacity: 0;
+  transition: 2s;
+}
+.container ul .colorgreen {
+  background-color: lightgreen;
+}
+.container ul .coloryellow {
+  background-color: lightyellow;
+}
+.container ul .colorred {
+  background-color: lightcoral;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 500px;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+@media (max-width: 1240px) {
+  .container ul table, .container ul tr, .container ul th {
+    width: 550px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 760px) {
+  .container ul table, .container ul tr, .container ul th {
+    width: 400px;
+  }
+}
+@media (max-width: 460px) {
+  .container ul table, .container ul tr, .container ul th {
+    width: 350px;
+  }
+}/*# sourceMappingURL=homepractice.css.map */

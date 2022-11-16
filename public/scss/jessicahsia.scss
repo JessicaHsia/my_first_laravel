@@ -85,14 +85,25 @@ main {
         @include flex(center, flex-start);
         flex-wrap: wrap;
         padding: 20px 10px;
+
         li{
             @include flex(center, center);
             flex-direction: column;
             @include font(12px, black, 100, unset, 2px);
             padding: 20px;
+
+            .no-img{
+                @include size(150px, 150px, 10px, rgba(0, 0, 0, 0.58));
+                @include font(30px, white, 400, unset, unset);
+                @include flex(center, center);
+            }
+
             img{
                 @include size(150px, 150px, 10px, unset);
+                object-fit: cover;
+                object-position: center;
             }
+
             a{
                 cursor: alias;
                 &:hover{

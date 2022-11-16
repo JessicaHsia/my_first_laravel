@@ -160,11 +160,27 @@
     letter-spacing: 2px;
     padding: 20px;
   }
+  main .works li .no-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.58);
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+    line-height: unset;
+    letter-spacing: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   main .works li img {
     width: 150px;
     height: 150px;
     border-radius: 10px;
     background: unset;
+    object-fit: cover;
+    object-position: center;
   }
   main .works li a {
     cursor: alias;

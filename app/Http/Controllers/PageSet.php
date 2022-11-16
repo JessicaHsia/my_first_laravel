@@ -23,23 +23,23 @@ class PageSet extends Controller
     }
 
     public function weather(){
-        return view('weathermap-second');
+        return view('works.weathermap-second');
     }
 
     public function game(){
-        return view('colorgame');
+        return view('works.colorgame');
     }
 
     public function bmi(){
-        return view('bmi');
+        return view('works.bmi');
     }
 
     public function microsoftIndex(){
-        return view('microsorf');
+        return view('works.microsorf');
     }
 
     public function card(){
-        return view('mooncard');
+        return view('works.mooncard');
     }
 
 }
