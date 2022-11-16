@@ -14,7 +14,7 @@
     <div class="container">
         <ul>
             <form>
-                <h2>BMI值計算</h2>
+                <h2>BMI值計算 <span><a href="/"><i class="fa-regular fa-house"></i></a></span></h2>
                 Height:
                 <input type="text" min="10" pattern="(0-9) {1,3}" placeholder="cm" id="h-input">
                 <br>
@@ -30,7 +30,6 @@
             <button id="clean">Reset</button>
             <br>
             <div id="output"></div>
-            <li><a href="/"><i class="fa-regular fa-house"></i></a></li>
         </ul>
         <ul>
             <table>

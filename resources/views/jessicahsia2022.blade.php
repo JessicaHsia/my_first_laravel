@@ -63,7 +63,6 @@
         <ul class="works">
             @foreach ($data as $data)
             <li>
-
                 @if ($data->img == null || $data->img == '')
                 <div class="no-img">J</div>
                 @else

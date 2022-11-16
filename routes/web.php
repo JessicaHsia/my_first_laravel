@@ -21,6 +21,8 @@ Route::get('/bmi', [PageSet::class, 'bmi']);
 Route::get('/microsoft', [PageSet::class, 'microsoftIndex']);
 Route::get('/card', [PageSet::class, 'card']);
 
+Route::get('/comment', [PageSet::class, 'comment']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -42,4 +42,8 @@ class PageSet extends Controller
         return view('works.mooncard');
     }
 
+    public function comment(){
+        return view('comment.comment');
+    }
+
 }

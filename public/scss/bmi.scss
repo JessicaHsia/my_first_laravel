@@ -3,37 +3,51 @@ $color_dark: #FFDA96;
 $scan_color_gradient: linear-gradient(200deg, $color_light, $color_dark);
 
 
-@import'./function';
+@import './function';
 
 
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    background: $scan_color_gradient;
-    @include size(100%, 100%);
+html,
+body {
+    @include size(100%, 100%, unset, $scan_color_gradient);
     margin: 0;
     padding: 0;
 }
 
-.container{
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+.container {
     @include flex(center, flex-start);
     @include posa(0, 5%);
     position: absolute;
+
     // background-color: peru;
     ul {
         margin-top: 10%;
-        form{
+
+        form {
             @include font(20px, 600);
             line-height: 50px;
             margin-right: 100px;
+
             input {
                 @include size(140px, 30px, 10px);
-                @include font(14px, 600);
+                @include font(14px, 600, 15px, 2px);
                 text-align: center;
             }
         }
+
         button {
             @include size(100px, 30px, 10px);
             @include font(16px, 600);
@@ -47,49 +61,54 @@ html, body {
             @include font(30px, 600);
             margin-bottom: 20px
         }
-        table, tr, th {
+
+        table,
+        tr,
+        th {
             @include size(700px, 40px);
             @include font(16px, 600);
             border: 1px solid grey;
-            border-collapse:collapse;
+            border-collapse: collapse;
             margin-top: 20px;
-        }   
+        }
+
         td {
             width: 60%;
         }
-        
+
         .output {
             border: 2px solid grey;
             color: brown;
             @include size (300px, 70px, 10px);
-            @include flex();
+            @include flex(center, center);
             @include font(25px, 600);
             margin-top: 30px;
             box-shadow: 5px 5px 10px grey;
             opacity: 1;
             transition: all 2s;
         }
+
         .output-act {
             opacity: 0;
             transition: 2s;
         }
-        
+
         .colorgreen {
             background-color: lightgreen;
         }
-        
-        .coloryellow{
+
+        .coloryellow {
             background-color: lightyellow;
         }
-        
-        .colorred{
+
+        .colorred {
             background-color: lightcoral;
         }
-        
+
     }
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
     width: 500px;
@@ -99,9 +118,12 @@ footer{
 
 
 @media (max-width: 1240px) {
-    .container{
-        ul{
-            table, tr, th{
+    .container {
+        ul {
+
+            table,
+            tr,
+            th {
                 width: 550px;
             }
         }
@@ -110,16 +132,19 @@ footer{
 
 
 @media (max-width: 1024px) {
-    .container{
+    .container {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media (max-width: 760px) {
-    .container{
-        ul{
-            table, tr, th{
+    .container {
+        ul {
+
+            table,
+            tr,
+            th {
                 width: 400px;
             }
         }
@@ -127,9 +152,12 @@ footer{
 }
 
 @media (max-width: 460px) {
-    .container{
-        ul{
-            table, tr, th{
+    .container {
+        ul {
+
+            table,
+            tr,
+            th {
                 width: 350px;
             }
         }

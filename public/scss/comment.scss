@@ -1,0 +1,15 @@
+@import 'basic_set';
+
+
+nav {
+    @include size(100%, 60px, unset, unset);
+    @include flex(flex-start, center);
+    padding: 10px;
+    @include font(30px, #660077, 400, unset, 2px);
+    // font-style: oblique;
+    font-family: cursive;
+
+    #my_name{
+        padding-left: calc(100% - 60%);
+    }
+}
