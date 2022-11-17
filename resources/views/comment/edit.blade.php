@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Add Works</title>
+    <title>Edit works</title>
 </head>
 
 <body>
@@ -22,52 +22,33 @@
     <main class=".container-fluid d-flex justify-content-center">
         <div class=".container-md bg-secondary bg-opacity-50 p-4 rounded-1 d-flex justify-content-start flex-column">
             <div>
-                <h3 class="text-white p-2">Add New Works：</h3>
+                <h3 class="text-white p-2">Edit works</h3>
             </div>
-            <form class="form" action="/comment/save" method="GET">
+            <form class="form" action="/comment/update/{{$comment->id}}" method="GET">
                 {{-- action="" => 填入接受這些資料的網址。需跟routes對應 --}}
                 {{-- method="" => 傳過去的方法 --}}
                 {{-- 方法有 get post delete --}}
-                @csrf
-                @foreach ($comments as $comment)
-                    <li class="p-3">
-                        @if ($comment->image == null || $comment->image == '')
-                            <div class="w-25 bg-light">null</div>
-                        @else
-                            <a href="/{{ $comment->page_name }}"><img src="{{ $comment->image }}"></a>
-                        @endif
-
-                        <p>{{ $comment->title }}</p>
-                        <a href="https://github.com/JessicaHsia/{{ $comment->github_url }}" class="text-reset text-decoration-none ">Github <i class="fa-solid fa-right-long"></i></a>
-                        <div>{{$comment->created_at}}</div>
-                        <div>{{ substr($comment->created_at, 0, 10) }}</div>
-                        <div>
-                            <a href="/comment/delete/{{$comment->id}}">Delete</a>
-                            <a href="/comment/edit/{{$comment->id}}">Edite</a>
-                        </div>
-                    </li>
-                @endforeach
                 <label for="basic-url" class="form-label">Works Page Name</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">/</span>
                     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                        name="page_name">
+                        name="page_name" value="{{$comment->page_name}}">
                     {{-- input一定要有 name="" 當傳資料給後端時key&value負責接收的 --}}
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Works Image</label>
-                    <input class="form-control" type="file" id="formFile" name="image">
+                    <input class="form-control" type="file" id="formFile" name="image" value="{{$comment->image}}">
                 </div>
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Works Title</label>
                     <input type="text" class="form-control" id="formGroupExampleInput"
-                        placeholder="enter works title" name="title">
+                        placeholder="enter works title" name="title" value="{{$comment->title}}">
                 </div>
                 <label for="basic-url" class="form-label">Works Github URL</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3">https://github.com/JessicaHsia/</span>
                     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
-                        name="github_url">
+                        name="github_url" value="{{$comment->github_url}}">
                 </div>
                 <div class="button-box d-flex">
                     <button class="btn text-white btn-warning m-2" type="reset">Reset</button>
