@@ -87,7 +87,7 @@ class Controller extends BaseController
         //Models操作
         Comment::where('id', $id)->delete();
         return redirect('/comment');
-    } 
+    }
 
     public function edit_comment($id)
     {

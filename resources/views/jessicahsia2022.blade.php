@@ -95,10 +95,10 @@
 
         </ul>
         <ul class="resume">
-            <a href="./img/Resume_page-0001.jpg" id="openimg-newpage" target="_blank"><img
-                    src="./img/Resume_page-0001.jpg" alt=""></a>
-            <a href="./img/Resume_page-0002.jpg" id="openimg-newpage" target="_blank"><img
-                    src="./img/Resume_page-0002.jpg" alt=""></a>
+            <a href="./img/jh_resume.jpg" id="openimg-newpage" target="_blank"><img
+                    src="./img/jh_resume.jpg" alt=""></a>
+            <a href="./img/jh_resume2.jpg" id="openimg-newpage" target="_blank"><img
+                    src="./img/jh_resume2.jpg" alt=""></a>
         </ul>
     </main>
 
