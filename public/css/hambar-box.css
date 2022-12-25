@@ -32,10 +32,6 @@
   }
   nav .hambar-box .menu_line {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: rgba(101, 0, 119, 0.7176470588);
   }
   nav .hambar-box .menu-1 {
     clear: both;

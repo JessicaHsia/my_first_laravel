@@ -30,7 +30,8 @@
         <ul class="hambar-box">
             <label for="menu-switch" class="menu_all" id="menu_all">
                 <div>
-                    <span class="menu_line"></span>
+                    <span class="menu_line"><i class="fa-solid fa-bars"></i>
+                    </span>
                 </div>
             </label>
             <input type="checkbox" id="menu-switch" hidden>
@@ -62,16 +63,17 @@
 
         <ul class="works">
             @foreach ($data as $data)
-            <li>
-                @if ($data->img == null || $data->img == '')
-                <div class="no-img">J</div>
-                @else
-                <a href="/{{$data->pagelink}}"><img src="{{$data->img}}"></a>
-                @endif
+                <li>
+                    @if ($data->img == null || $data->img == '')
+                        <div class="no-img">J</div>
+                    @else
+                        <a href="/{{ $data->pagelink }}"><img src="{{ $data->img }}"></a>
+                    @endif
 
-                <p>{{$data->title}}</p>
-                <a href="https://github.com/JessicaHsia/{{$data->link}}">Github<i class="fa-solid fa-right-long"></i></a>
-            </li>
+                    <p>{{ $data->title }}</p>
+                    <a href="https://github.com/JessicaHsia/{{ $data->link }}">Github<i
+                            class="fa-solid fa-right-long"></i></a>
+                </li>
             @endforeach
         </ul>
 
@@ -95,10 +97,10 @@
 
         </ul>
         <ul class="resume">
-            <a href="./img/jh_resume.jpg" id="openimg-newpage" target="_blank"><img
-                    src="./img/jh_resume.jpg" alt=""></a>
-            <a href="./img/jh_resume2.jpg" id="openimg-newpage" target="_blank"><img
-                    src="./img/jh_resume2.jpg" alt=""></a>
+            <a href="./img/jh_resume.jpg" id="openimg-newpage" target="_blank"><img src="./img/jh_resume.jpg"
+                    alt=""></a>
+            <a href="./img/jh_resume2.jpg" id="openimg-newpage" target="_blank"><img src="./img/jh_resume2.jpg"
+                    alt=""></a>
         </ul>
     </main>
 

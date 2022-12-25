@@ -21,6 +21,7 @@ Route::get('/color', [WorksPage::class, 'game']);
 Route::get('/bmi', [WorksPage::class, 'bmi']);
 Route::get('/microsoft', [WorksPage::class, 'microsoftIndex']);
 Route::get('/card', [WorksPage::class, 'card']);
+Route::get('/calculator', [WorksPage::class, 'calculator']);
 
 Route::get('/comment', [Controller::class, 'comment']);
 Route::get('/comment/save', [Controller::class, 'save_comment']);

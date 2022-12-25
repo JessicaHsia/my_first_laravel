@@ -28,4 +28,8 @@ class WorksPage extends Controller
     public function card(){
         return view('works.mooncard');
     }
+
+    public function calculator(){
+        return view('works.calculator');
+    }
 }
